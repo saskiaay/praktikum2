@@ -76,24 +76,29 @@ h2 {
 
 .info-row {
     display: flex;
-    flex-direction: column; /* MEMAKSA LABEL DI ATAS, ISI DI BAWAH */
+    /* KUNCI: Di layar kecil dia akan otomatis turun (wrap) */
+    flex-wrap: wrap; 
     padding: 12px 0;
-    border-bottom: 2px dotted rgba(255, 255, 255, 0.3); /* Disesuaikan dengan tema cokelatmu */
-    gap: 5px;
+    border-bottom: 1px dotted rgba(255, 255, 255, 0.3);
+    align-items: flex-start;
 }
 
 .info-label {
     font-weight: bold;
-    color: #000; /* Warna hitam agar kontras dengan background cokelat */
-    font-size: 1rem;
-    width: 100%; /* Memenuhi lebar layar */
+    color: #000;
+    /* Di laptop dia selebar 180px, di HP dia akan memenuhi baris jika tidak muat */
+    flex: 0 0 180px; 
+    margin-bottom: 5px;
 }
 
 .info-value {
     color: #222;
-    padding-left: 0; /* Hapus padding samping karena sudah di bawah */
-    font-size: 0.95rem;
-    word-break: break-word; /* Biar kalau alamat panjang tidak keluar kotak */
+    /* Mengambil sisa ruang yang ada */
+    flex: 1 1 250px; 
+    padding-left: 0;
+    word-break: break-word;
+    /* Menghilangkan paksaan teks ke samping */
+    white-space: normal; 
 }
 
 /* STYLE KHUSUS HOBI */
