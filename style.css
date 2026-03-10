@@ -75,30 +75,25 @@ h2 {
 }
 
 .info-row {
-  display: flex;
-  flex-wrap: wrap; /* Membolehkan isi turun ke bawah jika benar-benar sempit */
-  padding: 12px 0;
-  border-bottom: 2px dotted #eee;
-  align-items: flex-start;
+    display: flex;
+    flex-direction: column; /* MEMAKSA LABEL DI ATAS, ISI DI BAWAH */
+    padding: 12px 0;
+    border-bottom: 2px dotted rgba(255, 255, 255, 0.3); /* Disesuaikan dengan tema cokelatmu */
+    gap: 5px;
 }
 
 .info-label {
-  font-weight: 600;
-  color: #030303;
-  /* Gunakan flex-basis agar lebarnya konsisten */
-  flex-basis: 220px;
-  width: 220px;
-  flex-shrink: 0; /* Melarang label mengecil */
-  display: inline-block;
+    font-weight: bold;
+    color: #000; /* Warna hitam agar kontras dengan background cokelat */
+    font-size: 1rem;
+    width: 100%; /* Memenuhi lebar layar */
 }
 
 .info-value {
-  color: #030303;
-  /* Berikan sisa ruang ke isi */
-  flex: 1;
-  /* Berikan jarak aman agar tidak menempel ke label */
-  padding-left: 15px;
-  word-break: break-word; /* Memecah kata panjang jika perlu */
+    color: #222;
+    padding-left: 0; /* Hapus padding samping karena sudah di bawah */
+    font-size: 0.95rem;
+    word-break: break-word; /* Biar kalau alamat panjang tidak keluar kotak */
 }
 
 /* STYLE KHUSUS HOBI */
