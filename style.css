@@ -1,0 +1,249 @@
+/* IMPORT FONT MODERN */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #743838; /* Background luar abu-abu muda */
+  color: #030303;
+  line-height: 1.6;
+  padding: 40px 20px;
+  max-width: 850px;
+  margin: auto;
+}
+
+/* STYLE UNTUK SETIAP SECTION (PISAH BACKGROUND) */
+header,
+section {
+  background: rgb(161, 93, 93);
+  padding: 30px;
+  border-radius: 20px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 15px rgba(3, 3, 3, 0.904);
+  transition: transform 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-5px); /* Efek melayang saat di-hover */
+}
+
+/* HEADER */
+header {
+  text-align: center;
+}
+
+header h1 {
+  font-size: 28px;
+  color: #030303;
+  margin-top: 15px;
+}
+
+header p {
+  color: #030303;
+  font-size: 14px;
+}
+
+header img {
+  width: 150px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 5px solid #f8f9fa;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* JUDUL SECTION DENGAN GRADIENT BOX */
+h2 {
+  display: inline-block;
+  background: linear-gradient(135deg, #f8d36e 0%, #f8d36e 100%);
+  color: rgb(3, 3, 3);
+  padding: 8px 18px;
+  border-radius: 10px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgb(3, 3, 3);
+}
+
+/* DATA PRIBADI (DENGAN TITIK-TITIK) */
+.data-pribadi-box {
+  border-top: 1px solid #eee;
+}
+
+.info-row {
+  display: flex;
+  flex-wrap: wrap; /* Membolehkan isi turun ke bawah jika benar-benar sempit */
+  padding: 12px 0;
+  border-bottom: 2px dotted #eee;
+  align-items: flex-start;
+}
+
+.info-label {
+  font-weight: 600;
+  color: #030303;
+  /* Gunakan flex-basis agar lebarnya konsisten */
+  flex-basis: 220px;
+  width: 220px;
+  flex-shrink: 0; /* Melarang label mengecil */
+  display: inline-block;
+}
+
+.info-value {
+  color: #030303;
+  /* Berikan sisa ruang ke isi */
+  flex: 1;
+  /* Berikan jarak aman agar tidak menempel ke label */
+  padding-left: 15px;
+  word-break: break-word; /* Memecah kata panjang jika perlu */
+}
+
+/* STYLE KHUSUS HOBI */
+.hobby-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px; /* Jarak antar kotak hobi */
+}
+
+.hobby-list li {
+  background: #f1f3f5;
+  color: #444;
+  padding: 12px 20px;
+  border-radius: 15px;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid #030303;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: 0.3s;
+}
+
+.hobby-list li span {
+  font-size: 1.2rem;
+}
+
+.hobby-list li:hover {
+  background: #f8fbff;
+  border-color: #f18080ce;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgb(207, 102, 102);
+}
+/* TABEL PENDIDIKAN */
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 2px solid #f18080ce;
+  background: #f8fbff;
+}
+
+td {
+  padding: 15px 12px;
+  border-bottom: 1px solid #f5f5f5;
+  font-size: 0.9rem;
+}
+
+/* BOX KECIL NILAI & SKILL */
+.badge-nilai {
+  background: #e7f5ff;
+  color: #030303;
+  padding: 4px 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  border: 1px solid #030303;
+}
+
+.skill-list {
+  list-style: none;
+  display: grid;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-list li {
+  background: #f1f3f5;
+  padding: 8px 15px;
+  border-radius: 10px;
+  font-size: 13px;
+  border: 1px solid #e9ecef;
+}
+
+/* BUTTON */
+.btn-detail {
+  background: #f8d36e;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 11px;
+  transition: 0.3s;
+}
+
+.btn-detail:hover {
+  background: #030303;
+  box-shadow: 0 4px 10px rgba(3, 3, 3, 0.3);
+}
+
+/* STYLE UNTUK SOCIAL MEDIA BUTTONS */
+.social-box {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  padding-top: 10px;
+}
+
+.btn-social {
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.3s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Warna masing-masing sosmed */
+.fb {
+  background: #3b5998;
+}
+.tw {
+  background: #1da1f2;
+}
+.ig {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+
+.btn-social:hover {
+  transform: translateY(-5px);
+  filter: brightness(1.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Pastikan info-label di Kontak cukup lebar agar rapi */
+.info-label {
+  width: 120px; /* Sesuaikan jika teks label kepotong */
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #999;
+  font-size: 12px;
+}
